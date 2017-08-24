@@ -1,0 +1,19 @@
+package snake;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+public class RenderPanel extends JPanel {
+	
+	public static int curColor = 0;
+
+	protected void paintComponent(Graphics g) {
+	super.paintComponent(g);
+	g.setColor(new Color(curColor));
+	g.fillRect(0, 0, 800, 700);
+	curColor++; // This creates a new color each time as it keeps addinga  number to the ASCII characters
+		}
+	
+}
