@@ -1,0 +1,30 @@
+package snake;
+
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+
+public class Snake {
+	
+	public JFrame jframe;
+	
+	public Toolkit toolkit;
+
+	public Snake() {
+  
+		//This is how you can create a jframe (Pop up window)
+    
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		toolkit = Toolkit.getDefaultToolkit();
+		jframe = new JFrame("Snake");
+		jframe.setVisible(true);
+		jframe.setSize(800,  800);
+		jframe.setLocation(dim.width / 2 - jframe.getWidth() / 2,  dim.width / 2 - jframe.getHeight() / 2); // Centers window onto screen
+		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+	public static void main(String[] args) {
+		new Snake();
+	}
+}
